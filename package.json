@@ -1,0 +1,9 @@
+{
+  "name": "school-fees-management",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "flutter build web",
+    "start": "flutter run -d web --web-port $PORT"
+  }
+}
