@@ -240,8 +240,8 @@ class AdminDashboard extends StatelessWidget {
                           color: Theme.of(context).primaryColor,
                         ),
                       ),
-                      title: Text('أحمد محمد - الصف الثالث'),
-                      subtitle: Text('${DateTime.now().subtract(Duration(days: index)).toString().substring(0, 10)}'),
+                      title: const Text('أحمد محمد - الصف الثالث'),
+                      subtitle: Text(DateTime.now().subtract(Duration(days: index)).toString().substring(0, 10)),
                       trailing: Text(
                         '₪ ${(index + 1) * 500}',
                         style: const TextStyle(

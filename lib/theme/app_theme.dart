@@ -45,11 +45,11 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: primaryColor,
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         primary: primaryColor,
         secondary: secondaryColor,
         error: errorColor,
-        background: backgroundColor,
+        surface: backgroundColor,
       ),
       scaffoldBackgroundColor: backgroundColor,
       cardColor: cardColor,
@@ -102,11 +102,13 @@ class AppTheme {
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: errorColor, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         labelStyle: GoogleFonts.cairo(color: textLightColor),
         hintStyle: GoogleFonts.cairo(color: textLightColor),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
+        // تم التصحيح هنا
         color: cardColor,
         elevation: 2,
         shape: RoundedRectangleBorder(
@@ -120,11 +122,11 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       primaryColor: darkPrimaryColor,
-      colorScheme: ColorScheme.dark(
+      colorScheme: const ColorScheme.dark(
         primary: darkPrimaryColor,
         secondary: secondaryColor,
         error: errorColor,
-        background: darkBackgroundColor,
+        surface: darkBackgroundColor,
       ),
       scaffoldBackgroundColor: darkBackgroundColor,
       cardColor: darkCardColor,
@@ -177,11 +179,15 @@ class AppTheme {
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: errorColor, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        // ignore: deprecated_member_use
         labelStyle: GoogleFonts.cairo(color: darkTextColor.withOpacity(0.7)),
+        // ignore: deprecated_member_use
         hintStyle: GoogleFonts.cairo(color: darkTextColor.withOpacity(0.7)),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
+        // تم التصحيح هنا أيضاً
         color: darkCardColor,
         elevation: 2,
         shape: RoundedRectangleBorder(
